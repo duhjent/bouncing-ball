@@ -9,13 +9,10 @@ struct AppState {
   Uint32 *pixels;
   bool running;
 
-  int circleX;
-  int circleY;
-  int circleVelX;
-  int circleVelY;
-
   Uint64 timeLeft;
 };
+
+extern AppState GlobalState;
 
 int InitSdl();
 

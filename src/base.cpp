@@ -5,8 +5,6 @@
 #include <iostream>
 #include <ostream>
 
-extern AppState GlobalState;
-
 int InitSdl() {
   if (SDL_Init(SDL_INIT_VIDEO) != 0) {
     std::cerr << SDL_GetError() << std::endl;

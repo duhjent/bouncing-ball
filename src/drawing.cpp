@@ -2,8 +2,6 @@
 #include "constants.h"
 #include <algorithm>
 
-extern AppState GlobalState;
-
 void DrawPoint(Uint32 x, Uint32 y, Uint32 color) {
   GlobalState.pixels[(y * W_WIDTH + x)] = color;
 }
@@ -25,4 +23,8 @@ void DrawCircle(int x, int y, int r, Uint32 color) {
         std::min(x - halfw >= 0 ? 2 * halfw : halfw + x, halfw + W_WIDTH - x);
     memset(&(GlobalState.pixels[row * W_WIDTH + s]), color, sizeof(Uint32) * w);
   }
+}
+
+void ClearCanvas() {
+  memset(GlobalState.pixels, 255, sizeof(Uint32) * W_WIDTH * W_HEIGHT);
 }
