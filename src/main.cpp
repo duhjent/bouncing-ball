@@ -5,12 +5,9 @@
 #include "constants.h"
 #include "drawing.h"
 #include <SDL3/SDL.h>
-#include <algorithm>
 #include <cstddef>
 #include <cstdlib>
 #include <cstring>
-#include <iostream>
-#include <ostream>
 
 AppState GlobalState;
 
